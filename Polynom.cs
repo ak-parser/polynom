@@ -183,5 +183,23 @@ namespace Polynom
 
             return info + "\n";
         }
+
+        public static Polynom operator+(Polynom polynom1, Polynom polynom2)
+        {
+            return polynom1.AddPolynom(polynom2);
+        }
+        public static Polynom operator-(Polynom polynom1, Polynom polynom2)
+        {
+            return polynom1.SubtractionPolynom(polynom2);
+        }
+        public static Polynom operator*(Polynom polynom1, Polynom polynom2)
+        {
+            return polynom1.MultiplyPolynom(polynom2);
+        }
+
+        public static implicit operator Polynom(double koef)
+        {
+            return new Polynom(new List<double> { koef}, 0);
+        }
     }
 }

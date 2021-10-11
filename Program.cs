@@ -19,11 +19,15 @@ namespace Polynom
                 Console.WriteLine("1 polinom:\n" + polynom);
                 Console.WriteLine("2 polinom:\n" + polynom1);
 
-                Console.WriteLine("After add 2 polinoms:\n" + polynom.AddPolynom(polynom1));
+                Console.WriteLine("After add 2 polinoms:\n" + (polynom + polynom1));
 
-                Console.WriteLine("After subtraction 2 polinoms:\n" + polynom.SubtractionPolynom(polynom1));
+                Console.WriteLine("After subtraction 2 polinoms:\n" + (polynom - polynom1));
 
-                Console.WriteLine("After multiply 2 polinoms:\n" + polynom.MultiplyPolynom(polynom1));
+                Console.WriteLine("After multiply 2 polinoms:\n" + (polynom * polynom1));
+
+                double number = 132.546;
+                Polynom polynom2 = number;
+                Console.WriteLine($"Double number: {number} => Polynom: {polynom2}");
             }
             catch (ArgumentNullException exception)
             {
